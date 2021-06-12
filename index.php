@@ -16,36 +16,20 @@
                 <input type="text" name="todo" id="todo">
             </p>
             <p>
-                <input type="submit" id="bEnviar" value="Añadir Todo">
+                <input type="button" id="bEnviar" value="Añadir Todo">
             </p>
         </form>
     </div>
 
     <div id="mostrar-todo-container">
 
-    <?php
-        include_once 'todos.php';
 
-        $todos = new Todos();
-       
-            if (isset($_POST['todo'])){
-              
-                $todos->nuevoTodo($_POST['todo']);
-
-            }
-
-            $lista = $todos->mostrarTodos();
-
-            foreach($lista as $todo){               
-                 echo '<div class="pendiente">' . $todo['texto'] . '</div>';
-            }
-?>
     </div>
 
     <script src='main.js'></script>
-<!--     <script>
+    <script>
         cargarTodos();
-    </script> -->
+    </script> 
 </body>
 
 </html>
